@@ -1,6 +1,6 @@
 title: "Cardoso Victor"
 email: vicardoso@sfr.fr
-description:
+description: >- 
   Ce site présente mon parcours professionnel, mes projets et mes compétences en tant que développeur web.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vicardoso.github.io" # the base hostname & protocol for your site
@@ -8,6 +8,6 @@ github_username:  vicardoso
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
   - jekyll-feed
