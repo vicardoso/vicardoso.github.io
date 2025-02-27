@@ -1,5 +1,13 @@
-theme: jekyll-theme-minimal
-title: Vicardoso's homepage
-description: Bookmark this to keep an eye on my project updates!
-# baseurl: ""
-url: "https://vicardoso.github.io"
+title: "Cardoso"
+email: vicardoso@sfr.fr
+description: >- 
+  Ce site présente mon parcours professionnel, mes projets et mes compétences en tant que développeur web.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://vicardoso.github.io" # the base hostname & protocol for your site
+github_username:  vicardoso
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
