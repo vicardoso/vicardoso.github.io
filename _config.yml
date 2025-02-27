@@ -8,6 +8,6 @@ github_username:  vicardoso
 
 # Build settings
 markdown: kramdown
-remote_theme: jekyll-theme-minimal
+remote_theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
