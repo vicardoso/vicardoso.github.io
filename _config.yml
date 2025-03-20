@@ -13,6 +13,11 @@ plugins:
 color-scheme: auto
 show_downloads: false
 
+# Configuration SASS
+sass:
+  style: compressed
+  sass_dir: _sass
+
 # Navigation
 navigation:
   - name: À propos
