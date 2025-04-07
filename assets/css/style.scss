@@ -1,219 +1,191 @@
 @import "{{ site.theme }}";
 
-/* Reset des styles par défaut */
+/* Variables */
+:root {
+  --primary-color: #6C63FF;
+  --secondary-color: #4A4A4A;
+  --text-color: #333333;
+  --background-light: #FFFFFF;
+  --background-dark: #F8F9FA;
+  --transition: all 0.3s ease;
+}
+
+/* Reset et styles de base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Style pour la section hero */
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-light);
+}
+
+/* Section Hero */
 #hero {
-  position: relative;
   height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, 
-    #4a332b 0%,
-    #2c1810 50%,
-    #1a0f0a 100%
-  );
+  background: linear-gradient(135deg, #6C63FF 0%, #4A4A4A 100%);
+  position: relative;
   overflow: hidden;
 }
 
-#hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  background: radial-gradient(
-    circle at center,
-    rgba(139, 94, 60, 0.2) 0%,
-    rgba(79, 55, 48, 0.3) 50%,
-    rgba(55, 37, 32, 0.4) 100%
-  );
-}
-
 .hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   padding: 0 2rem;
-  margin: 0 auto;
+  color: white;
+  z-index: 2;
 }
 
 #hero h1 {
-  font-size: 3.5em;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 0 0 1rem 0;
-  padding: 0;
-  border: none;
-  width: 100%;
-  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease;
 }
 
 .hero-subtitle {
-  font-size: 1.5em;
-  color: #f0e6e4;
-  margin: 0 0 2rem 0;
-  padding: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease 0.2s;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 1em 2em;
-  background: #8B5E3C;
-  color: white;
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--primary-color);
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
+  animation: fadeInUp 1s ease 0.4s;
 }
 
 .cta-button:hover {
-  background: #6B4423;
-  transform: translateY(-2px);
-  text-decoration: none;
-  border-color: #f0e6e4;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Style général */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Masquer le header par défaut du thème minimal sur la page d'accueil */
-header {
-  display: none;
-}
-
-/* Styles pour les autres sections */
+/* Sections */
 section {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-section:not(#hero) {
-  background: #fff;
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--secondary-color);
 }
 
-h1, h2, h3 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2.5em;
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 2em;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin-bottom: 1em;
-  position: relative;
-  padding-left: 1.5em;
-}
-
-ul li:before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #2c3e50;
-}
-
-a {
-  color: #0366d6;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #1a4b8c;
-  text-decoration: underline;
-}
-
-/* Style pour la section compétences */
+/* Skills Section */
 #skills ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1em;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
 }
 
 #skills li {
-  background: #f6f8fa;
-  padding: 1em;
-  border-radius: 4px;
-  margin-bottom: 0.5em;
+  background: var(--background-dark);
+  padding: 1.5rem;
+  border-radius: 10px;
   text-align: center;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#skills li:before {
-  content: none;
+#skills li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Style pour les expériences et le parcours */
+/* Projects & Experience Section */
+#projects ul, #professional-background ul {
+  display: grid;
+  gap: 2rem;
+}
+
 #projects li, #professional-background li {
-  margin-bottom: 2em;
-  padding: 1em;
-  background: #f8f9fa;
-  border-radius: 4px;
-  border-left: 3px solid #2c3e50;
+  background: var(--background-dark);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Style pour le contact */
+#projects li:hover, #professional-background li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#projects h3, #professional-background h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
 #contact {
   text-align: center;
-  background: #f6f8fa;
-  padding: 2em;
-  border-radius: 4px;
-  margin-top: 3em;
+  background: var(--background-dark);
+  border-radius: 10px;
+  padding: 4rem 2rem;
 }
 
 #contact a {
   display: inline-block;
-  padding: 0.5em 1em;
-  background: #0366d6;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
   color: white;
-  border-radius: 4px;
-  margin-top: 1em;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: var(--transition);
+  margin-top: 2rem;
 }
 
 #contact a:hover {
-  background: #1a4b8c;
-  text-decoration: none;
-} 
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  section {
+    padding: 3rem 1rem;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
