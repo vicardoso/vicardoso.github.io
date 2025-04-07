@@ -1,76 +1,161 @@
 ---
 layout: default
-title: Victor Cardoso - Développeur Web
-description: Portfolio de Victor Cardoso, développeur web full-stack
+title: Victor Cardoso - Développeur Web Full-Stack
+description: Portfolio professionnel de Victor Cardoso, développeur web full-stack passionné
 ---
 
-<div class="wrapper">
-    <section id="hero">
+<main class="main-content">
+    <!-- Section Hero -->
+    <section id="hero" class="hero">
         <div class="hero-content">
-            <h1>HEY, JE SUIS VICTOR CARDOSO</h1>
-            <p class="hero-subtitle">Un Développeur Web Full-Stack passionné par la création d'applications web innovantes</p>
-            <a href="#projects" class="cta-button">Voir mes projets</a>
+            <h1 class="hero-title">Victor Cardoso</h1>
+            <p class="hero-subtitle">Développeur Web Full-Stack</p>
+            <div class="hero-description">
+                <p>Passionné par la création d'applications web innovantes</p>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-down">
+                <span class="scroll-text">Découvrir</span>
+                <span class="scroll-icon">↓</span>
+            </a>
         </div>
     </section>
 
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Jeune développeur en ingénierie logicielle, j'ai suivi plusieurs formations en développement web depuis 2017. J'ai acquis une grande capacité d'adaptation en explorant diverses technologies. Mon objectif est de m'investir davantage pour me spécialiser en profondeur.</p>
+    <!-- Section À propos -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Jeune développeur en ingénierie logicielle, j'ai suivi plusieurs formations en développement web depuis 2017. J'ai acquis une grande capacité d'adaptation en explorant diverses technologies. Mon objectif est de m'investir davantage pour me spécialiser en profondeur.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Compétences</h2>
-        <ul>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript</li>
-            <li>Php</li>
-            <li>Symfony</li>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>Django</li>
-            <li>Git & GitHub</li>
-        </ul>
+    <!-- Section Compétences -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Front-end</h3>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Back-end</h3>
+                    <ul class="skill-list">
+                        <li>PHP / Symfony</li>
+                        <li>Python / Django</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Outils</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Terminal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Mes expériences</h2>
-        <ul>
-            <li>
-                <h3>MyWebTeam</h3>
-                <p>Lors de mon premier stage j'ai pu commencer le travail en temps réel en tant qu'intégrateur web</p>
-            </li>
-            <li>
-                <h3>Avenir Data</h3>
-                <p>Lors de ce stage j'ai pu apprendre les technologies Python Django qui m'ont extremement plu</p>
-            </li>
-            <li>
-                <h3>FMS</h3>
-                <p>Mon premier CDI en tant que développeur web, j'ai pu travailler sur de nombreuses technologies tel que Php, Prestashop, Python, ainsi que TypeScript</p>
-            </li>
-        </ul>
+    <!-- Section Expériences -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>FMS</h3>
+                        <p class="timeline-date">2023 - Présent</p>
+                        <p>Mon premier CDI en tant que développeur web, j'ai pu travailler sur de nombreuses technologies tel que PHP, Prestashop, Python, ainsi que TypeScript</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Avenir Data</h3>
+                        <p class="timeline-date">2022</p>
+                        <p>Lors de ce stage j'ai pu apprendre les technologies Python Django qui m'ont extrêmement plu</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>MyWebTeam</h3>
+                        <p class="timeline-date">2021</p>
+                        <p>Lors de mon premier stage j'ai pu commencer le travail en temps réel en tant qu'intégrateur web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="professional-background">
-        <h2>Parcours professionnel</h2>
-        <ul>
-            <li>
-                <h3>In'Tech Sud</h3>
-                <p>J'ai commencé mon parcours académique dans une école privée spécialisée en informatique, où j'ai acquis des bases solides en programmation, développement web, et gestion de projets. Bien que je n'aie pas obtenu de diplôme, cette expérience m'a permis de développer des compétences techniques essentielles et de travailler sur divers projets en équipe.</p>
-            </li>
-            <li>
-                <h3>Afpa de Bayonne</h3>
-                <p>Par la suite, j'ai poursuivi ma formation à l'AFPA, où j'ai approfondi mes connaissances en développement logiciel et en ingénierie informatique. Cette période m'a offert l'opportunité de me spécialiser davantage et de travailler sur des projets concrets, renforçant ainsi mes compétences pratiques.</p>
-            </li>
-            <li>
-                <h3>Global Digital University</h3>
-                <p>J'ai pu me spécialiser dans le développement avec le framework symfony via une formation en ligne</p>
-            </li>
-        </ul>
+    <!-- Section Formation -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Parcours</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Global Digital University</h3>
+                    <p class="education-date">2023</p>
+                    <p>Spécialisation Symfony Framework</p>
+                </div>
+                <div class="education-card">
+                    <h3>AFPA Bayonne</h3>
+                    <p class="education-date">2022</p>
+                    <p>Formation développement logiciel et ingénierie informatique</p>
+                </div>
+                <div class="education-card">
+                    <h3>In'Tech Sud</h3>
+                    <p class="education-date">2020-2021</p>
+                    <p>Formation en développement web et programmation</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter à l'adresse suivante :</p>
-        <a href="mailto:vicardoso(at)sfr.fr">vicardoso(at)sfr.fr</a>
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>Vous avez un projet intéressant ? N'hésitez pas à me contacter !</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:vicardoso@sfr.fr" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Me contacter par email
+                    </a>
+                    <a href="https://github.com/vicardoso" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Voir mon GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-</div>
+</main>
+
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>

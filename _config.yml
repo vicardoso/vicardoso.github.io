@@ -1,32 +1,54 @@
-title: "Cardoso Victor"
+# Informations du site
+title: "Victor Cardoso"
 description: "Développeur Web Full-Stack passionné par les technologies modernes"
+author: Victor Cardoso
 email: vicardoso@sfr.fr
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://vicardoso.github.io" # the base hostname & protocol for your site
+baseurl: ""
+url: "https://vicardoso.github.io"
 github_username: vicardoso
 
-remote_theme: pages-themes/minimal@v0.2.0
+# Configuration du thème
+theme: minima
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Personnalisation du thème
-color-scheme: auto
-show_downloads: false
+# Paramètres personnalisés
+lang: fr
+timezone: Europe/Paris
 
-# Configuration SASS
+# Navigation principale
+header_pages:
+  - about.md
+  - skills.md
+  - projects.md
+  - contact.md
+
+# Réseaux sociaux
+social_links:
+  github: vicardoso
+  linkedin: victor-cardoso
+  email: vicardoso@sfr.fr
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  experiences:
+    output: true
+    permalink: /experiences/:path/
+
+# Build settings
+markdown: kramdown
 sass:
   style: compressed
   sass_dir: _sass
 
-# Navigation
-navigation:
-  - name: À propos
-    link: "#about"
-  - name: Compétences
-    link: "#skills"
-  - name: Expériences
-    link: "#projects"
-  - name: Parcours
-    link: "#professional-background"
-  - name: Contact
-    link: "#contact"
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
