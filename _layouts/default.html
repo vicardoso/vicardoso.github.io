@@ -18,8 +18,8 @@
 </head>
 <body>
     <header>
-        <h1>{{ site.title }}</h1>
         <nav>
+            <a href="#" class="site-title">{{ site.title }}</a>
             <ul>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
@@ -34,5 +34,35 @@
     <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sélectionne TOUS les liens de la page qui commencent par #
+            const scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href');
+
+                    // Cas spécial pour le lien vers le haut de la page (#)
+                    if (targetId === '#') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
