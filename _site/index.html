@@ -27,7 +27,7 @@
     <section id="hero">
         <div class="hero-content">
             <h1>Bienvenue sur mon porfolio</h1>
-            <p class="hero-subtitle">Un Développeur Web Full-Stack passionné par la création d'applications web innovantes</p>
+            <p class="hero-subtitle">Un jeune développeur web full-stack passionné par la création d'applications web innovantes</p>
             <a href="#projects" class="cta-button">Voir mes projets</a>
         </div>
     </section>
@@ -134,15 +134,15 @@
             <h2>Parcours professionnel</h2>
             <ul>
                 <li>
-                    <h3>In'Tech Sud</h3>
+                    <h3>In'Tech Sud <span class="study-duration">2017 - 2021</span></h3>
                     <p>J'ai commencé mon parcours académique dans une école privée spécialisée en informatique, où j'ai acquis des bases solides en programmation, développement web, et gestion de projets. Bien que je n'aie pas obtenu de diplôme, cette expérience m'a permis de développer des compétences techniques essentielles et de travailler sur divers projets en équipe.</p>
                 </li>
                 <li>
-                    <h3>Afpa de Bayonne</h3>
+                    <h3>Afpa de Bayonne <span class="study-duration">2021 - 2022</span></h3>
                     <p>Par la suite, j'ai poursuivi ma formation à l'AFPA, où j'ai approfondi mes connaissances en développement logiciel et en ingénierie informatique. Cette période m'a offert l'opportunité de me spécialiser davantage et de travailler sur des projets concrets, renforçant ainsi mes compétences pratiques.</p>
                 </li>
                 <li>
-                    <h3>Global Digital University</h3>
+                    <h3>Global Digital University <span class="study-duration">2024</span></h3>
                     <p>J'ai pu me spécialiser dans le développement avec le framework symfony via une formation en ligne</p>
                 </li>
             </ul>
@@ -150,9 +150,32 @@
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter à l'adresse suivante :</p>
-        <a href="mailto:vicardoso(at)sfr.fr">vicardoso(at)sfr.fr</a>
+        <h2>Contactez-moi</h2>
+        <p>Vous avez une question ou une proposition ? N'hésitez pas à utiliser le formulaire ci-dessous.</p>
+        
+        <form action="#" method="POST" id="contact-form">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Envoyer le message</button>
+        </form>
+        
+        <!-- Message de succès/erreur (peut être géré par JS ou le service tiers) -->
+        <p id="form-status"></p> 
+
     </section>
 </div>
     </main>

@@ -185,6 +185,7 @@ section h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-weight: 600; /* Ajouté pour mettre le texte en gras (semi-bold) */
 }
 
 .skill-logo {
@@ -271,23 +272,79 @@ section h2 {
   text-align: center;
   background: #F8F9FA;
   border-radius: 10px;
-  padding: 6rem 2rem; /* Augmentation du padding vertical */
+  padding: 4rem 2rem; /* Padding actuel */
 }
 
-#contact a {
+#contact h2 {
+  color: var(--text-color); /* Assure que le titre est visible sur fond clair */
+  margin-bottom: 1rem; /* Espace après le titre */
+}
+
+#contact p {
+   color: var(--text-color); /* Assure que le paragraphe est visible */
+   margin-bottom: 2rem;
+}
+
+#contact-form {
+  max-width: 600px; /* Limite la largeur du formulaire */
+  margin: 0 auto; /* Centre le formulaire */
+  text-align: left; /* Réaligne le texte du formulaire à gauche */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(139, 94, 60, 0.2); /* Adapte la couleur du box-shadow */
+}
+
+.submit-button {
   display: inline-block;
   padding: 1rem 2rem;
   background: var(--primary-color);
   color: white;
+  border: none;
   text-decoration: none;
   border-radius: 30px;
   font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%; /* Prend toute la largeur du conteneur du formulaire */
 }
 
-#contact a:hover {
+.submit-button:hover {
   transform: translateY(-3px);
-  background: #6B4423; /* Marron foncé pour survol */
+  background: #6B4423; /* Correspond au hover du lien contact précédent */
+}
+
+#form-status {
+    margin-top: 1.5rem;
+    font-weight: 500;
 }
 
 /* Section Parcours Professionnel */
@@ -320,6 +377,22 @@ section h2 {
   padding: 1.5rem; /* Padding cohérent */
   border-radius: 8px; /* Bords arrondis cohérents */
   border-left: 3px solid var(--text-color); /* Garder une bordure distincte */
+}
+
+#professional-background h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* Espace entre titre/date et paragraphe */
+  color: var(--primary-color); /* Optionnel: mettre le titre en couleur primaire */
+}
+
+.study-duration {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d; /* Couleur plus discrète */
+  white-space: nowrap; /* Évite que la date ne passe à la ligne */
+  margin-left: 1rem; /* Espace entre titre et date */
 }
 
 /* Responsive Design */
