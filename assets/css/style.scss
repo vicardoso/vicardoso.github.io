@@ -152,11 +152,6 @@ section h2 {
   flex: 1 1 0; /* Force une base de 0 pour une répartition égale */
 }
 
-.about-description {
-  /* flex: 1; Déjà présent */
-  /* text-align: center; Supprimé car l'image est déplacée */
-}
-
 .profile-image {
   display: block; /* Permet d'appliquer margin auto */
   width: 180px; /* Taille de l'image */
@@ -372,60 +367,24 @@ section h2 {
 
 /* Section Contact */
 #contact {
-  text-align: center;
+  text-align: center; /* Garde le centrage général */
   background: #F8F9FA;
   border-radius: 10px;
   padding: 4rem 2rem; /* Padding actuel */
 }
 
 #contact h2 {
-  color: var(--text-color); /* Assure que le titre est visible sur fond clair */
-  margin-bottom: 1rem; /* Espace après le titre */
+  color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
 #contact p {
-   color: var(--text-color); /* Assure que le paragraphe est visible */
+   color: var(--text-color);
    margin-bottom: 2rem;
 }
 
-#contact-form {
-  max-width: 600px; /* Limite la largeur du formulaire */
-  margin: 0 auto; /* Centre le formulaire */
-  text-align: left; /* Réaligne le texte du formulaire à gauche */
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--text-color);
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.3s ease;
-}
-
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(139, 94, 60, 0.2); /* Adapte la couleur du box-shadow */
-}
-
-.submit-button {
+/* Styles pour le lien mailto */
+.contact-link {
   display: inline-block;
   padding: 1rem 2rem;
   background: var(--primary-color);
@@ -437,17 +396,11 @@ section h2 {
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  width: 100%; /* Prend toute la largeur du conteneur du formulaire */
 }
 
-.submit-button:hover {
+.contact-link:hover {
   transform: translateY(-3px);
-  background: #6B4423; /* Correspond au hover du lien contact précédent */
-}
-
-#form-status {
-    margin-top: 1.5rem;
-    font-weight: 500;
+  background: #6B4423; /* Correspond au hover précédent */
 }
 
 /* Section Parcours Professionnel */
@@ -498,6 +451,35 @@ section h2 {
   margin-left: 1rem; /* Espace entre titre et date */
 }
 
+/* Footer */
+footer {
+  background: var(--primary-color); /* Fond couleur primaire */
+  color: white; /* Texte en blanc */
+  /* text-align: center; Remplacé par flex */
+  display: flex; /* Utilise flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 1.5rem 1rem; /* Padding vertical et horizontal */
+  margin-top: 4rem; /* Ajoute un espace au-dessus du footer */
+}
+
+footer p {
+    margin: 0; /* Supprime la marge par défaut du paragraphe */
+    /* text-align: center; Supprimé car géré par flex */
+}
+
+/* Suppression des anciens styles de formulaire */
+/*
+#contact-form { ... }
+.form-group { ... }
+.form-group label { ... }
+.form-group input[type="text"], ... { ... }
+.form-group input[type="text"]:focus, ... { ... }
+.submit-button { ... }
+.submit-button:hover { ... }
+#form-status { ... }
+*/
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -526,4 +508,4 @@ section h2 {
   section h2 {
     font-size: 2rem;
   }
-} 
+}
