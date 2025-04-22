@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   line-height: 1.6;
   color: var(--text-color);
   background: var(--bg-color);
@@ -137,15 +137,79 @@ section h2 {
 #about {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  padding-left: 2rem; /* Assure un padding latéral */
-  padding-right: 2rem; /* Assure un padding latéral */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.about-content {
+  display: flex;
+  gap: 3rem; /* Espace entre les deux colonnes */
+  align-items: center; /* Changé de flex-start à center pour centrer verticalement */
+}
+
+.about-description,
+.about-interests {
+  flex: 1 1 0; /* Force une base de 0 pour une répartition égale */
+}
+
+.about-description {
+  /* flex: 1; Déjà présent */
+  /* text-align: center; Supprimé car l'image est déplacée */
+}
+
+.profile-image {
+  display: block; /* Permet d'appliquer margin auto */
+  width: 180px; /* Taille de l'image */
+  height: 180px;
+  border-radius: 50%; /* Rend l'image circulaire */
+  object-fit: cover; /* Assure que l'image couvre bien la zone sans se déformer */
+  margin: 0 auto 2rem auto; /* Centre l'image horizontalement et ajoute de l'espace en dessous */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-interests {
+  flex: 1; /* Chaque colonne prend la moitié de l'espace */
 }
 
 #about p {
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  /* text-align: center; Supprimé */
+  text-align: left; /* Alignement gauche pour paragraphe en colonne */
+  max-width: none; /* La largeur est gérée par la colonne flex */
+  margin-left: 0; /* Plus besoin de centrer */
+  margin-right: 0;
+}
+
+/* Styles pour les centres d'intérêt dans #about */
+#about h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-top: 0; /* Supprime la marge supérieure */
+  margin-bottom: 1.5rem;
+  text-align: left; /* Aligne le titre à gauche */
+}
+
+.interests-list {
+  list-style: none;
+  padding: 0;
+  max-width: none; /* Largeur gérée par la colonne */
+  margin: 0; /* Plus besoin de centrer */
+  text-align: left; /* Alignement à gauche */
+}
+
+.interests-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5em;
+  /* display: inline-block; Supprimé */
+  text-align: left;
+}
+
+.interests-list li::before {
+  content: "▹"; /* Marqueur personnalisé (comme pour les projets) */
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 /* Section Compétences */
@@ -196,6 +260,45 @@ section h2 {
 
 #skills li:hover {
   transform: translateY(-5px);
+}
+
+/* Sous-titre dans la section Compétences (pour Langues) */
+.skills-subtitle {
+  color: white; /* Texte blanc sur fond coloré */
+  font-size: 1.8rem; /* Taille un peu plus petite que h2 */
+  text-align: center;
+  margin-top: 3rem; /* Espace au-dessus du sous-titre */
+  margin-bottom: 1.5rem;
+}
+
+/* Liste des langues */
+.languages-list {
+  list-style: none;
+  padding: 0;
+  /* max-width: 400px; Supprimé pour permettre l'étalement */
+  margin: 0 auto 2rem auto;
+  /* text-align: center; Remplacé par flex */
+  display: flex; /* Affichage horizontal */
+  justify-content: center; /* Centre les éléments horizontalement */
+  flex-wrap: wrap; /* Permet le passage à la ligne si besoin */
+  gap: 1rem 2rem; /* Espace vertical et horizontal entre les langues */
+  color: white;
+}
+
+.languages-list li {
+  /* margin-bottom: 0.5rem; Géré par gap */
+  /* Pas de forme ovale/cercle ici */
+  /* Ajout pour l'alignement drapeau/texte si nécessaire */
+  display: inline-flex; /* Ou juste inline si l'alignement vertical est ok */
+  align-items: center; 
+}
+
+/* Style pour les icônes de drapeau */
+.flag-icon {
+  height: 50px; /* Augmenté à 50px (taille des skill-logo) */
+  width: auto;
+  margin-right: 0.75rem; /* Augmenté l'espace */
+  /* vertical-align: middle; Supprimé car géré par flex sur li */
 }
 
 /* Section Projets (reste sur fond blanc) */
